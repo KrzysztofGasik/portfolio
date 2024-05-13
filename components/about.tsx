@@ -1,0 +1,39 @@
+"use client";
+
+import SectionHeading from "@/components/section-heading";
+import { motion } from "framer-motion";
+import { useInViewActiveSection } from "@/hooks/hooks";
+
+export default function About() {
+  const { ref } = useInViewActiveSection("About");
+
+  return (
+    <motion.section
+      className="section-about"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1 }}
+      id="about"
+      ref={ref}
+    >
+      <SectionHeading title="About" />
+      <p className="about-paragraph">
+        Skilled software development professional with{" "}
+        <span className="bold">4 years in web development</span>. What are my
+        current activities? Rewriting old applications to use React with
+        TypeScript. Unit and Integration tests done with{" "}
+        <span className="italic">
+          Jest and React Testing Library, E2E in cypress
+        </span>
+        . Collaborating with team members to produce better and cleaner code.
+        Meetings with Software Architects and Designers.
+      </p>
+      <p>
+        My current stack is{" "}
+        <span className="underline">React with TypeScript</span>, combined with
+        GIT, Jenkins, Gerrit. Redux for state management and RTK Query for api
+        calls.
+      </p>
+    </motion.section>
+  );
+}
