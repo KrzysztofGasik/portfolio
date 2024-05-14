@@ -23,7 +23,7 @@ const DarkModeContextProvider = ({ children }: { children: ReactNode }) => {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
     document.body.classList.toggle("body-dark-mode");
-    window.localStorage.setItem("theme", theme);
+    window.localStorage.setItem("theme", theme === "light" ? "dark" : "light");
   };
 
   useEffect(() => {
@@ -34,11 +34,10 @@ const DarkModeContextProvider = ({ children }: { children: ReactNode }) => {
       "(prefers-color-scheme: dark)",
     ).matches;
 
-    if (getThemeFromLocalstorage) {
-      console.log("getDarkModeFromLocalStorage", getThemeFromLocalstorage);
+    if (!!getThemeFromLocalstorage) {
       setTheme(getThemeFromLocalstorage);
       window.localStorage.setItem("theme", getThemeFromLocalstorage);
-      if (getThemeFromLocalstorage === "yes") {
+      if (getThemeFromLocalstorage === "dark") {
         document.body.classList.add("body-dark-mode");
       }
     } else if (windowMatches && getThemeFromLocalstorage === null) {

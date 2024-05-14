@@ -92,7 +92,6 @@ header {
     position: fixed;
     top: 1em;
     left: 50%;
-    transform: translateX(-50%);
     height: 2.5rem;
     width: 100%;
     max-width: 33rem;
@@ -348,7 +347,7 @@ nav {
 
 .dark-linkedin-button,
 .dark-github-button {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .linkedin-button:hover,
@@ -554,7 +553,7 @@ nav {
 
 .project-wrapper:nth-child(odd) .project-image {
     right: 0;
-    left: -10rem;
+    left: -12rem;
 }
 
 .project-wrapper:nth-child(odd) .project-left-side {
@@ -863,14 +862,17 @@ footer {
 /* media queries */
 
 @media (min-width: 240px) and (max-width: 640px) {
-    .navigation-bar {
+    .navigation-bar,
+    .dark-navigation-bar{
         height: 5rem;
+        left: 25%;
     }
 
     nav {
         top: 0;
         height: 4.5rem;
         max-width: 20rem;
+        left: 25%;
     }
 
     .navigation-list {
@@ -906,6 +908,10 @@ footer {
 
     .project-wrapper:nth-child(2n+1) .project-left-side {
         margin: 0;
+    }
+
+    .project-title {
+        text-align: center;
     }
 
     .project-description {
