@@ -5,25 +5,26 @@ import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useDarkMode } from "@/context/dark-mode-context";
+import { useTheme } from "@/context/dark-mode-context";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
-  const linkClasses = (name: string) => {
-    if (activeSection === name) {
-      return `${isDarkMode ? "dark-navigation-link" : "navigation-link"} navigation-link-active transition`;
-    }
-    return `${isDarkMode ? "dark-navigation-link" : "navigation-link"} transition`;
-  };
+    const { theme } = useTheme();
 
-  const { isDarkMode } = useDarkMode();
+    const linkClasses = (name: string) => {
+      if (activeSection === name) {
+        return `${theme === "dark" ? "dark-navigation-link" : "navigation-link"} navigation-link-active transition`;
+    }
+      return `${theme === "dark" ? "dark-navigation-link" : "navigation-link"} transition`;
+
+  };
 
   return (
     <header>
       <motion.div
-        className={`${isDarkMode ? "dark-navigation-bar" : "navigation-bar"}`}
+        className={`${theme === "dark" ? "dark-navigation-bar" : "navigation-bar"}`}
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{
           y: 0,
@@ -51,7 +52,7 @@ export default function Header() {
                 <span
                   className={
                     activeSection === name
-                      ? `${isDarkMode ? "dark-navigation-link-label-active" : "navigation-link-label-active"} navigation-link-label`
+                      ? `${theme === "dark" ? "dark-navigation-link-label-active" : "navigation-link-label-active"} navigation-link-label`
                       : "navigation-link-label"
                   }
                 >

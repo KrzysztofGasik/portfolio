@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { TbWorldWww } from "react-icons/tb";
-import { useDarkMode } from "@/context/dark-mode-context";
+import { useTheme } from "@/context/dark-mode-context";
 
 export interface IProject {
   title: string;
@@ -23,7 +23,7 @@ export default function Project({ data }: { data: IProject }) {
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.75, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const { isDarkMode } = useDarkMode();
+  const { theme } = useTheme();
   return (
     <motion.div
       ref={ref}
@@ -31,12 +31,12 @@ export default function Project({ data }: { data: IProject }) {
       className="project-wrapper"
     >
       <section
-        className={`${isDarkMode ? "dark-project" : "project"} transition`}
+        className={`${theme === "dark" ? "dark-project" : "project"} transition`}
       >
         <div className="project-left-side">
           <h3 className="project-title">{title}</h3>
           <p
-            className={`${isDarkMode ? "dark-project-description" : "project-description"}`}
+            className={`${theme === "dark" ? "dark-project-description" : "project-description"}`}
           >
             {description}
           </p>

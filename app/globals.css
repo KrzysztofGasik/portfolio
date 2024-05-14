@@ -12,7 +12,11 @@
 
 html {
     scroll-behavior: smooth !important;
-    --line-color: rgba(0, 122, 204, 0.5);
+    --line-color: rgba(0, 122, 204, 0.6);
+}
+
+html body.body-dark-mode {
+    --line-color: rgba(0, 122, 204, 0.4);
 }
 
 body {
@@ -34,52 +38,46 @@ main {
     padding: 0 1rem;
 }
 
-.bg-color-1 {
+.bg-color-1,
+.dark-bg-color-1 {
     background-color: #6ddaea;
     position: absolute;
     top: -6rem;
     right: 0;
     height: 31.25rem;
-    width: 50rem;
+    width: 60rem;
     border-radius: 9999px;
     filter: blur(14rem);
     z-index: -10;
+}
+
+.bg-color-1 {
+    background-color: #6ddaea;
 }
 
 .dark-bg-color-1 {
     background-color: #1d93a2;
-    position: absolute;
-    top: -6rem;
-    right: 0;
-    height: 31.25rem;
-    width: 50rem;
-    border-radius: 9999px;
-    filter: blur(14rem);
-    z-index: -10;
 }
 
-.bg-color-2 {
+.bg-color-2,
+.dark-bg-color-2 {
     background-color: #fbe2e3;
     position: absolute;
     top: -1rem;
     left: -5rem;
     height: 31.25rem;
-    width: 50rem;
+    width: 60rem;
     border-radius: 9999px;
     filter: blur(12rem);
     z-index: -10;
 }
 
+.bg-color-2 {
+    background-color: #fbe2e3;
+}
+
 .dark-bg-color-2 {
     background-color: #c79798;
-    position: absolute;
-    top: -1rem;
-    left: -5rem;
-    height: 31.25rem;
-    width: 50rem;
-    border-radius: 9999px;
-    filter: blur(12rem);
-    z-index: -10;
 }
 
 /* header */
@@ -469,9 +467,12 @@ nav {
     font-weight: 700;
 }
 
-.project-description {
+.project-description,
+.dark-project-description {
     margin: 1rem 0 0 0;
     line-height: 1.625;
+}
+.project-description {
     color: rgb(55, 65, 81);
 }
 
@@ -620,12 +621,20 @@ nav {
     margin-top: 0 !important;
 }
 
-.experience-item-description {
+.experience-item-description,
+.dark-experience-item-description {
     font-weight: 400;
     margin-top: 0 !important;
+
+}
+
+.experience-item-description {
     color: #374151;
 }
 
+.dark-experience-item-description {
+    color: rgba(255, 255, 255, 0.75);
+}
 /* contact */
 
 .section-contact {
@@ -634,9 +643,18 @@ nav {
     text-align: center;
 }
 
+
+.contact-information,
+.dark-contact-information{
+    margin-top: -1.25rem;
+}
+
 .contact-information {
     color: #374151;
-    margin-top: -1.25rem;
+}
+
+.dark-contact-information {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .contact-information-link {
@@ -644,21 +662,38 @@ nav {
     text-decoration: none;
 }
 
-.contact-form {
+.contact-form,
+.dark-contact-form{
     margin: 2.5rem 0 0 0;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
 
-.contact-form-email {
+.dark-contact-form {
+    color: #000;
+}
+
+.contact-form-email,
+.dark-contact-form-email{
     height: 3.5rem;
     border-radius: 0.5rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0 1rem;
 }
 
-.contact-form-message {
+.dark-contact-form-email {
+    background-color: var(--white);
+    opacity: 0.8;
+    outline: none;
+}
+
+.dark-contact-form-email:focus {
+    opacity: 1;
+}
+
+.contact-form-message,
+.dark-contact-form-message {
     height: 13rem;
     margin: 1rem 0 0 0;
     border-radius: 0.5rem;
@@ -666,21 +701,40 @@ nav {
     padding: 1rem;
 }
 
-.contact-form-send-button {
+.dark-contact-form-message {
+    background-color: var(--white);
+    opacity: 0.8;
+    outline: none;
+}
+
+.dark-contact-form-message:focus {
+    opacity: 1;
+}
+
+.contact-form-send-button,
+.dark-contact-form-send-button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     height: 3rem;
     width: 8rem;
-    background-color: #111827;
     border-radius: 9999px;
     outline: none;
     color: var(--white);
     border: none;
 }
 
-.contact-form-send-button:focus {
+.contact-form-send-button {
+    background-color: #111827;
+}
+
+.dark-contact-form-send-button {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form-send-button:focus,
+.dark-contact-form-send-button:focus {
     transform: scale(1.1);
 }
 
@@ -689,7 +743,12 @@ nav {
     background-color: #030712;
 }
 
-.contact-form-send-button:active {
+.dark-contact-form-send-button:hover {
+    transform: scale(1.1);
+}
+
+.contact-form-send-button:active,
+.dark-contact-form-send-button:active {
     transform: scale(1.05);
 }
 
@@ -699,7 +758,8 @@ nav {
     opacity: 0.7;
 }
 
-.contact-form-send-button:hover .contact-form-send-button-icon {
+.contact-form-send-button:hover .contact-form-send-button-icon,
+.dark-contact-form-send-button:hover .contact-form-send-button-icon{
     transform: translateX(0.25rem);
 }
 

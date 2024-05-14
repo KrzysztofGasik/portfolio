@@ -4,10 +4,10 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 import React from "react";
-import { useDarkMode } from "@/context/dark-mode-context";
+import { useTheme } from "@/context/dark-mode-context";
 
 export default function IntroductionLinks() {
-  const { isDarkMode } = useDarkMode();
+  const { theme } = useTheme();
   return (
     <motion.div
       className="links-wrapper"
@@ -21,24 +21,24 @@ export default function IntroductionLinks() {
         Contact me <BsArrowRight className="arrow-right-icon" />
       </Link>
       <a
-        className={`${isDarkMode ? "dark-download-cv-button" : "download-cv-button"} transition`}
+        className={`${theme === "dark" ? "dark-download-cv-button" : "download-cv-button"} transition`}
         href="/cv.pdf"
         download
       >
         Download CV{" "}
         <HiDownload
-          className={`${isDarkMode ? "dark-download-cv-icon" : "download-cv-icon"}`}
+          className={`${theme === "dark" ? "dark-download-cv-icon" : "download-cv-icon"}`}
         />
       </a>
       <a
-        className={`${isDarkMode ? "dark-linkedin-button" : "linkedin-button"} transition`}
+        className={`${theme === "dark" ? "dark-linkedin-button" : "linkedin-button"} transition`}
         href="https://www.linkedin.com/in/krzysztof-gasik"
         target="_blank"
       >
         <BsLinkedin className="linkedin-icon" />
       </a>
       <a
-        className={`${isDarkMode ? "dark-github-button" : "github-button"} transition`}
+        className={`${theme === "dark" ? "dark-github-button" : "github-button"} transition`}
         href="https://github.com/KrzysztofGasik/"
         target="_blank"
       >

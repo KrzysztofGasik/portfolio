@@ -8,51 +8,51 @@ import React, {
   useState,
 } from "react";
 
-type DarkModeOptions = "yes" | "no";
+type ThemeOptions = "light" | "dark";
 
-type DarkMode = {
-  isDarkMode: DarkModeOptions;
+type Theme = {
+  theme: ThemeOptions;
   toggleTheme: () => void;
 };
 
-export const DarkModeContext = createContext<DarkMode | null>(null);
+export const DarkModeContext = createContext<Theme | null>(null);
 
 const DarkModeContextProvider = ({ children }: { children: ReactNode }) => {
-  const [isDarkMode, setIsDarkMode] = useState<DarkModeOptions>("no");
+  const [theme, setTheme] = useState<ThemeOptions>("light");
 
   const toggleTheme = () => {
-    setIsDarkMode(isDarkMode === "yes" ? "no" : "yes");
+    setTheme(theme === "light" ? "dark" : "light");
     document.body.classList.toggle("body-dark-mode");
-    window.localStorage.setItem("isDarkMode", isDarkMode);
+    window.localStorage.setItem("theme", theme);
   };
 
   useEffect(() => {
-    const getDarkModeFromLocalStorage = window.localStorage.getItem(
-      "isDarkMode",
-    ) as DarkModeOptions | null;
+    const getThemeFromLocalstorage = window.localStorage.getItem(
+      "theme",
+    ) as ThemeOptions | null;
     const windowMatches = window.matchMedia(
       "(prefers-color-scheme: dark)",
     ).matches;
 
-    if (getDarkModeFromLocalStorage) {
-      console.log("getDarkModeFromLocalStorage", getDarkModeFromLocalStorage);
-      setIsDarkMode(getDarkModeFromLocalStorage);
-      window.localStorage.setItem("isDarkMode", getDarkModeFromLocalStorage);
-      if (getDarkModeFromLocalStorage === "yes") {
+    if (getThemeFromLocalstorage) {
+      console.log("getDarkModeFromLocalStorage", getThemeFromLocalstorage);
+      setTheme(getThemeFromLocalstorage);
+      window.localStorage.setItem("theme", getThemeFromLocalstorage);
+      if (getThemeFromLocalstorage === "yes") {
         document.body.classList.add("body-dark-mode");
       }
-    } else if (windowMatches && getDarkModeFromLocalStorage === null) {
-      const switchToDark = windowMatches ? "yes" : "no";
-      setIsDarkMode(switchToDark);
-      window.localStorage.setItem("isDarkMode", switchToDark);
-      if (switchToDark === "yes") {
+    } else if (windowMatches && getThemeFromLocalstorage === null) {
+      const switchToDark = windowMatches ? "dark" : "light";
+      setTheme(switchToDark);
+      window.localStorage.setItem("theme", switchToDark);
+      if (switchToDark === "dark") {
         document.body.classList.add("body-dark-mode");
       }
     }
   }, []);
 
   const value = {
-    isDarkMode,
+    theme,
     toggleTheme,
   };
 
@@ -63,7 +63,7 @@ const DarkModeContextProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export function useDarkMode() {
+export function useTheme() {
   const context = useContext(DarkModeContext);
   if (context === null) {
     throw new Error(

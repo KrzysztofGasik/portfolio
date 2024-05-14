@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { useDarkMode } from "@/context/dark-mode-context";
+import { useTheme } from "@/context/dark-mode-context";
 
 export default function Background() {
-  const { isDarkMode } = useDarkMode();
+  const { theme } = useTheme();
   return (
     <>
-      <div className={`${isDarkMode ? "dark-bg-color-1" : "bg-color-1"}`}></div>
-      <div className={`${isDarkMode ? "dark-bg-color-2" : "bg-color-2"}`}></div>
+      <div className={`${theme === "dark" ? "dark-bg-color-1" : "bg-color-1"}`}></div>
+      <div className={`${theme === "dark" ? "dark-bg-color-2" : "bg-color-2"}`}></div>
     </>
   );
 }

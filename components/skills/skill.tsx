@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useDarkMode } from "@/context/dark-mode-context";
+import { useTheme } from "@/context/dark-mode-context";
 
 const fadeInAnimationOptions = {
   initial: {
@@ -24,10 +24,10 @@ export default function Skill({
   name: string;
   index: number;
 }) {
-  const { isDarkMode } = useDarkMode();
+  const { theme } = useTheme();
   return (
     <motion.li
-      className={`${isDarkMode === "yes" ? "dark-skill" : "skill"}`}
+      className={`${theme === "dark" ? "dark-skill" : "skill"}`}
       variants={fadeInAnimationOptions}
       initial="initial"
       whileInView="animate"
