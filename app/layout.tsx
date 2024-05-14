@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "@/components/header";
+import Header from "@/components/header/header";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ActiveSectionProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
-import Footer from "@/components/footer";
+import Footer from "@/components/footer/footer";
 import DarkModeContextProvider from "@/context/dark-mode-context";
 import DarkMode from "@/components/dark-mode/dark-mode";
 import Background from "@/app/background";

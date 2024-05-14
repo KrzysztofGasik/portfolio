@@ -1,0 +1,25 @@
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatarPhotoWrapper {
+    position: relative;
+}
+
+.avatarPhoto {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    border: 0.35rem solid var(--white);
+    object-fit: cover;
+}
+
+.avatarEmoji {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

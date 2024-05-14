@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { TbWorldWww } from "react-icons/tb";
 import { useTheme } from "@/context/dark-mode-context";
+import classes from "./project.module.css";
 
 export interface IProject {
   title: string;
@@ -28,27 +29,31 @@ export default function Project({ data }: { data: IProject }) {
     <motion.div
       ref={ref}
       style={{ scale: scaleProgress, opacity: opacityProgress }}
-      className="project-wrapper"
+      className={classes.projectWrapper}
     >
       <section
-        className={`${theme === "dark" ? "dark-project" : "project"} transition`}
+        className={`${theme === "dark" ? classes.projectDark : classes.project} transition-150`}
       >
-        <div className="project-left-side">
-          <h3 className="project-title">{title}</h3>
+        <div className={classes.projectText}>
+          <h3 className={classes.projectTitle}>{title}</h3>
           <p
-            className={`${theme === "dark" ? "dark-project-description" : "project-description"}`}
+            className={`${theme === "dark" ? classes.projectDescriptionDark : classes.projectDescription}`}
           >
             {description}
           </p>
-          <div className="project-details transition">
-            <a href={projectUrl} className="project-link" target="_blank">
+          <div className={`${classes.projectDetails} transition-150`}>
+            <a
+              href={projectUrl}
+              className={classes.projectLink}
+              target="_blank"
+            >
               Link to {title.toLowerCase()}
             </a>
-            <TbWorldWww className="project-www-icon transition" />
+            <TbWorldWww className={`${classes.projectWwwIcon} transition`} />
           </div>
-          <ul className="project-tags">
+          <ul className={classes.projectTags}>
             {tags.map((tag) => (
-              <li key={tag} className="project-tag">
+              <li key={tag} className={classes.projectTag}>
                 {tag}
               </li>
             ))}
@@ -58,7 +63,7 @@ export default function Project({ data }: { data: IProject }) {
           src={imageUrl}
           alt={title}
           quality={95}
-          className="project-image transition"
+          className={`${classes.projectImage} transition-150`}
         />
       </section>
     </motion.div>

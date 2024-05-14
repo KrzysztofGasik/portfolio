@@ -8,6 +8,7 @@ import React, { FunctionComponentElement } from "react";
 import { IconBaseProps } from "react-icons";
 import ExperienceItem from "@/components/experience/experience-item";
 import { useInViewActiveSection } from "@/hooks/hooks";
+import classes from "./experience.module.css";
 
 export type ExperienceItemType = {
   title: string;
@@ -20,7 +21,7 @@ export type ExperienceItemType = {
 export default function Experience() {
   const { ref } = useInViewActiveSection("Experience");
   return (
-    <section id="experience" className="section-experience" ref={ref}>
+    <section id="experience" className={classes.experience} ref={ref}>
       <SectionHeading title="My experience" />
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (

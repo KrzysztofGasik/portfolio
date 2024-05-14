@@ -4,15 +4,16 @@ import SectionHeading from "@/components/section-heading";
 import { useInViewActiveSection } from "@/hooks/hooks";
 import ContactForm from "@/components/contact/contact-form";
 import { motion } from "framer-motion";
-import {useTheme} from "@/context/dark-mode-context";
+import { useTheme } from "@/context/dark-mode-context";
+import classes from "./contact.module.css";
 
 export default function Contact() {
   const { ref } = useInViewActiveSection("Contact");
-  const {theme} = useTheme()
+  const { theme } = useTheme();
   return (
     <motion.section
       id="contact"
-      className="section-contact"
+      className={classes.contact}
       ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -22,9 +23,14 @@ export default function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading title="Contact me" />
-      <p className={`${theme === "dark" ? "dark-contact-information" : "contact-information"}`}>
+      <p
+        className={`${theme === "dark" ? classes.contactInformationDark : classes.contactInformation}`}
+      >
         Please contact me directly at{" "}
-        <a href="mailto:kgasik@gmail.com" className="contact-information-link">
+        <a
+          href="mailto:kgasik@gmail.com"
+          className={classes.contactInformationLink}
+        >
           kgasik@gmail.com
         </a>{" "}
         or use below form.

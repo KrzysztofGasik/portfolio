@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ProfilePhoto from "@/public/profile_photo.jpg";
 import React from "react";
+import classes from "./introduction-avatar.module.css";
 
 export default function IntroductionAvatar() {
   return (
-    <div className="avatar">
-      <div className="avatar-photo-wrapper">
+    <div className={classes.avatar}>
+      <div className={classes.avatarPhotoWrapper}>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -22,12 +23,12 @@ export default function IntroductionAvatar() {
             height={250}
             quality={80}
             priority={true}
-            className="avatar-photo"
+            className={classes.avatarPhoto}
           />
         </motion.div>
         <motion.span
           role="img"
-          className="avatar-emoji"
+          className={classes.avatarEmoji}
           initial={{ opacity: 0, scaleY: 0 }}
           animate={{ opacity: 1, scaleY: 1 }}
           transition={{

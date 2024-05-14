@@ -1,0 +1,52 @@
+.button,
+.buttonDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 3rem;
+    width: 8rem;
+    border-radius: 9999px;
+    outline: none;
+    color: var(--white);
+    border: none;
+}
+
+.button {
+    background-color: #111827;
+}
+
+.buttonDark {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.button:focus,
+.buttonDark:focus {
+    transform: scale(1.1);
+}
+
+.button:hover,
+.buttonDark:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #030712;
+}
+
+.button:active,
+.buttonDark:active {
+    transform: scale(1.05);
+}
+
+.buttonIcon {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    opacity: 0.7;
+}
+
+.button:hover .buttonIcon,
+.buttonDark:hover .buttonIcon{
+    transform: translateX(0.25rem);
+}

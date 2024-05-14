@@ -1,0 +1,48 @@
+.contactForm,
+.contactFormDark{
+    margin: 2.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.contactFormDark {
+    color: #000;
+}
+
+.contactFormEmail,
+.contactFormEmailDark {
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 1rem;
+}
+
+.contactFormEmailDark {
+    background-color: var(--white);
+    opacity: 0.8;
+    outline: none;
+}
+
+.contactFormEmailDark:focus {
+    opacity: 1;
+}
+
+.contactFormMessage,
+.contactFormMessageDark {
+    height: 13rem;
+    margin: 1rem 0 0 0;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.contactFormMessageDark {
+    background-color: var(--white);
+    opacity: 0.8;
+    outline: none;
+}
+
+.contactFormMessageDark:focus {
+    opacity: 1;
+}

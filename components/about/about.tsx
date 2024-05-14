@@ -3,13 +3,14 @@
 import SectionHeading from "@/components/section-heading";
 import { motion } from "framer-motion";
 import { useInViewActiveSection } from "@/hooks/hooks";
+import classes from "./about.module.css";
 
 export default function About() {
   const { ref } = useInViewActiveSection("About");
 
   return (
     <motion.section
-      className="section-about"
+      className={classes.about}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 }}
@@ -17,7 +18,7 @@ export default function About() {
       ref={ref}
     >
       <SectionHeading title="About" />
-      <p className="about-paragraph">
+      <p className={classes.paragraph}>
         Skilled software development professional with{" "}
         <span className="bold">4 years in web development</span>. What are my
         current activities? Rewriting old applications to use React with

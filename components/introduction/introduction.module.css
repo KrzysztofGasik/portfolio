@@ -1,0 +1,12 @@
+.introduction {
+    margin: 1rem 0 4rem 0;
+    max-width: 50rem;
+    text-align: center;
+    scroll-margin-top: 7rem;
+}
+
+@media all and (max-width: 640px) {
+    .introduction {
+        scroll-margin-top: 7rem;
+    }
+}

@@ -1,0 +1,41 @@
+.bgColorRight,
+.bgColorRightDark {
+    background-color: #6ddaea;
+    position: absolute;
+    top: -6rem;
+    right: 0;
+    height: 31.25rem;
+    width: 60rem;
+    border-radius: 9999px;
+    filter: blur(14rem);
+    z-index: -10;
+}
+
+.bgColorRight {
+    background-color: #6ddaea;
+}
+
+.bgColorRightDark {
+    background-color: #1d93a2;
+}
+
+.bgColorLeft,
+.bgColorLeftDark {
+    background-color: #fbe2e3;
+    position: absolute;
+    top: -1rem;
+    left: -5rem;
+    height: 31.25rem;
+    width: 60rem;
+    border-radius: 9999px;
+    filter: blur(12rem);
+    z-index: -10;
+}
+
+.bgColorLeft {
+    background-color: #fbe2e3;
+}
+
+.bgColorLeftDark {
+    background-color: #c79798;
+}

@@ -5,44 +5,45 @@ import { FaGithubSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 import React from "react";
 import { useTheme } from "@/context/dark-mode-context";
+import classes from "./introduction-links.module.css";
 
 export default function IntroductionLinks() {
   const { theme } = useTheme();
   return (
     <motion.div
-      className="links-wrapper"
+      className={classes.linksWrapper}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         delay: 0.3,
       }}
     >
-      <Link href="#contact" className="contact-button transition">
-        Contact me <BsArrowRight className="arrow-right-icon" />
+      <Link
+        href="#contact"
+        className={`${classes.contactButton} transition-150`}
+      >
+        Contact me <BsArrowRight className={classes.arrowRightIcon} />
       </Link>
       <a
-        className={`${theme === "dark" ? "dark-download-cv-button" : "download-cv-button"} transition`}
+        className={`${theme === "dark" ? classes.downloadCvButtonDark : classes.downloadCvButton} transition-150`}
         href="/cv.pdf"
         download
       >
-        Download CV{" "}
-        <HiDownload
-          className={`${theme === "dark" ? "dark-download-cv-icon" : "download-cv-icon"}`}
-        />
+        Download CV <HiDownload className={classes.downloadCvIcon} />
       </a>
       <a
-        className={`${theme === "dark" ? "dark-linkedin-button" : "linkedin-button"} transition`}
+        className={`${theme === "dark" ? classes.linkedinButtonDark : classes.linkedinButton} transition-150`}
         href="https://www.linkedin.com/in/krzysztof-gasik"
         target="_blank"
       >
-        <BsLinkedin className="linkedin-icon" />
+        <BsLinkedin className={classes.linkedinIcon} />
       </a>
       <a
-        className={`${theme === "dark" ? "dark-github-button" : "github-button"} transition`}
+        className={`${theme === "dark" ? classes.githubButtonDark : classes.githubButton} transition-150`}
         href="https://github.com/KrzysztofGasik/"
         target="_blank"
       >
-        <FaGithubSquare className="github-icon" />
+        <FaGithubSquare className={classes.githubIcon} />
       </a>
     </motion.div>
   );

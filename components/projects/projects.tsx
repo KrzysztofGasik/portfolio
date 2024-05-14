@@ -5,12 +5,13 @@ import { projectsData } from "@/lib/data";
 import Project, { IProject } from "./project";
 import { Fragment } from "react";
 import { useInViewActiveSection } from "@/hooks/hooks";
+import classes from "./projects.module.css";
 
 export default function Projects() {
   const { ref } = useInViewActiveSection("Projects", 0.5);
 
   return (
-    <section className="section-projects" id="projects" ref={ref}>
+    <section className={classes.Projects} id="projects" ref={ref}>
       <SectionHeading title="My Projects" />
       {projectsData.map((project: IProject) => (
         <Fragment key={project.title}>

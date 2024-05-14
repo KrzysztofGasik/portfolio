@@ -1,0 +1,37 @@
+.lightModeButton,
+.darkModeButton {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid var(--white);
+    border-radius: 9999px;
+}
+
+.lightModeButton {
+    background-color: rgba(0, 122, 204, 0.5);
+}
+
+.darkModeButton {
+    background-color: var(--gray-950)
+}
+
+.lightModeButton:hover,
+.darkModeButton:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+.lightModeButton:active,
+.darkModeButton:active {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: #ffd700;
+}
+
+.darkModeButton:hover .icon {
+    transform: scale(1.2);
+}

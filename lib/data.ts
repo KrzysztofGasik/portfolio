@@ -44,7 +44,7 @@ export const experiencesData = [
   {
     title: "Junior Developer",
     location: "Warsaw",
-    description: "I worked as a junior developer for 18 months for TV Puls.",
+    description: "I worked as a Junior Developer for 18 months for TV Puls.",
     icon: React.createElement(RiJavascriptFill),
     date: "March 2020 - December 2021",
   },
