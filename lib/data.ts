@@ -37,7 +37,7 @@ export const experiencesData = [
     title: "Coders Lab",
     location: "Warsaw",
     description:
-      "I graduated after 9 months of studying at Coders Lab to graduate as React Developer.",
+      "After 9 months of intensive course at Coders Lab I completed it as React Developer",
     icon: React.createElement(LuGraduationCap),
     date: "June 2019",
   },
@@ -52,7 +52,7 @@ export const experiencesData = [
     title: "Frontend Developer",
     location: "Wroclaw",
     description:
-      "I'm now a Frontend Developer working for Nokia Mobile Networks. My stack includes React, Next.js, TypeScript. Currently, I am open to full-time work, in full-time/hybrid mode in Warsaw or remotely.",
+      "I worked as Frontend Developer for Nokia Mobile Networks. My stack includes React, Next.js, TypeScript. Currently, I am open to full-time work, in full-time/hybrid mode in Warsaw or remotely.",
     icon: React.createElement(FaReact),
     date: "January 2022 - May 2024",
   },
