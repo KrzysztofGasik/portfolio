@@ -39,3 +39,39 @@
 .bgColorLeftDark {
     background-color: #c79798;
 }
+
+@media all and (max-width: 640px) {
+    .bgColorRight,
+    .bgColorRightDark {
+        width: 30rem;
+    }
+
+    .bgColorLeft,
+    .bgColorLeftDark {
+        width: 30rem;
+    }
+}
+
+@media all and (max-width: 460px) {
+    .bgColorRight,
+    .bgColorRightDark {
+        width: 20rem;
+    }
+
+    .bgColorLeft,
+    .bgColorLeftDark {
+        width: 20rem;
+    }
+}
+
+@media all and (max-width: 360px) {
+    .bgColorRight,
+    .bgColorRightDark {
+        width: 15rem;
+    }
+
+    .bgColorLeft,
+    .bgColorLeftDark {
+        width: 15rem;
+    }
+}

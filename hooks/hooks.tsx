@@ -11,7 +11,8 @@ export function useInViewActiveSection(
   const { ref, inView } = useInView({
     threshold: thresholdValue,
   });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick, setTimeOfLastClick } =
+    useActiveSectionContext();
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(sectionName);
@@ -20,26 +21,3 @@ export function useInViewActiveSection(
 
   return { ref, inView };
 }
-
-// export function useTheme() {
-//   const [theme, setTheme] = useState<DarkMode>(() => {
-//     const themeInLocalStorage = localStorage.getItem("theme");
-//     if (themeInLocalStorage) {
-//       return themeInLocalStorage as DarkMode;
-//     } else {
-//       const preferredTheme = window.matchMedia(
-//         "(prefers-color-scheme: dark)",
-//       ).matches;
-//       const preferredThemeColor = preferredTheme ? "dark" : "light";
-//       window.localStorage.setItem("theme", preferredThemeColor);
-//       return preferredThemeColor;
-//     }
-//   });
-//   const toggleTheme = () => {
-//     const currentTheme = theme === "light" ? "dark" : "light";
-//     setTheme(currentTheme);
-//     window.localStorage.setItem("theme", currentTheme);
-//   };
-//
-//   return { theme, toggleTheme };
-// }
