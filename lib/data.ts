@@ -2,6 +2,7 @@ import React from "react";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import tshopImg from "@/public/t-shop.jpg";
 import shareWithOthersImg from "@/public/share-with-others.jpg";
 import tvPulsImg from "@/public/tvpuls.jpg";
 
@@ -60,10 +61,17 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "T-shop",
+    description: "E-commerce shop with cool metal t-shirts",
+    tags: ["Next.js", "TypeScript", "React", "MongoDB", "Prisma"],
+    projectUrl: "https://t-shop-ecommerce.vercel.app/",
+    imageUrl: tshopImg,
+  },
+  {
     title: "Share with others",
     description:
       "New version of project Oddam Rzeczy. Rebuild from class to hooks, from scss to css modules, from local storage to firebase + redux toolkit.",
-    tags: ["React", "Redux", "Firebase"],
+    tags: ["React", "JavaScript", "Redux", "Firebase"],
     projectUrl: "https://share-with-others.web.app/",
     imageUrl: shareWithOthersImg,
   },
@@ -71,7 +79,7 @@ export const projectsData = [
     title: "New version of TV Puls website",
     description:
       "New version of website, custom theme using lazy loading, owl carousel, css grid and flexbox.",
-    tags: ["JavaScript", "Css"],
+    tags: ["JavaScript", "CSS"],
     projectUrl: "https://tvpuls.pl",
     imageUrl: tvPulsImg,
   },
