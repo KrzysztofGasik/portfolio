@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import tshopImg from "@/public/t-shop.jpg";
 import shareWithOthersImg from "@/public/share-with-others.jpg";
+import pollenAlertImg from "@/public/pollen-alert.png";
 import tvPulsImg from "@/public/tvpuls.jpg";
 
 export const links = [
@@ -76,6 +77,20 @@ export const projectsData = [
     imageUrl: shareWithOthersImg,
   },
   {
+    title: "Pollen Alert",
+    description:
+      "New version of project. Implement with React Router and TypeScript with css modules and framer motion for animation.",
+    tags: [
+      "React",
+      "TypeScript",
+      "React Router",
+      "CSS Modules",
+      "Framer Motion",
+    ],
+    projectUrl: "https://pollen-alert.vercel.app/",
+    imageUrl: pollenAlertImg,
+  },
+  {
     title: "New version of TV Puls website",
     description:
       "New version of website, custom theme using lazy loading, owl carousel, css grid and flexbox.",
@@ -86,16 +101,18 @@ export const projectsData = [
 ];
 
 export const skillsData = [
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "Next.js",
+  "Redux",
   "HTML",
   "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
   "Git",
-  "Redux",
+  "Node.js",
   "React Testing Library",
   "Cypress",
   "Framer Motion",
+  "Jira",
+  "Robot Framework",
 ];
