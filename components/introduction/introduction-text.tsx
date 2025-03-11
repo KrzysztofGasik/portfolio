@@ -12,7 +12,7 @@ export default function IntroductionText() {
     >
       <span className="bold">Hi, {`I'm`} Krzysztof.</span> {`I'm `}
       <span className="bold">Frontend Developer</span> with{" "}
-      <span className="bold">over 4 years</span> of experience. I enjoy creating{" "}
+      <span className="bold">over 5 years</span> of experience. I enjoy creating{" "}
       <span className="italic">websites and apps</span> with{" "}
       <span className="underline">React and Next.js</span>.
     </motion.h1>

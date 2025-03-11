@@ -20,7 +20,7 @@ export default function About() {
       <SectionHeading title="About" />
       <p className={classes.paragraph}>
         Skilled software development professional with{" "}
-        <span className="bold">4 years in web development</span>. What are my
+        <span className="bold">5 years in web development</span>. What are my
         current activities? Rewriting old applications to use React with
         TypeScript. Unit and Integration tests done with{" "}
         <span className="italic">
