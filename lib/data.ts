@@ -1,11 +1,11 @@
+import pollenAlertImg from "@/public/pollen-alert.png";
+import shareWithOthersImg from "@/public/share-with-others.jpg";
+import tshopImg from "@/public/t-shop.jpg";
+import tvPulsImg from "@/public/tvpuls.jpg";
 import React from "react";
-import { RiJavascriptFill } from "react-icons/ri";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import tshopImg from "@/public/t-shop.jpg";
-import shareWithOthersImg from "@/public/share-with-others.jpg";
-import pollenAlertImg from "@/public/pollen-alert.png";
-import tvPulsImg from "@/public/tvpuls.jpg";
+import { RiJavascriptFill } from "react-icons/ri";
 
 export const links = [
   {
@@ -53,10 +53,17 @@ export const experiencesData = [
   {
     title: "Frontend Developer",
     location: "Wroclaw",
-    description:
-      "I worked as Frontend Developer for Nokia Mobile Networks. My stack includes React, Next.js, TypeScript. Currently, I am open to full-time work, in full-time/hybrid mode in Warsaw or remotely.",
+    description: "I worked as Frontend Developer for Nokia Mobile Networks.",
     icon: React.createElement(FaReact),
-    date: "January 2022 - May 2024",
+    date: "January 2022 - June 2024",
+  },
+  {
+    title: "Frontend Developer",
+    location: "Wroclaw",
+    description:
+      "I worked as Frontend Developer as external contractor in DK&A for Nokia Mobile Networks. My stack includes React, Next.js, TypeScript. Currently, I am open to full-time work, in full-time/hybrid mode in Warsaw or remotely.",
+    icon: React.createElement(FaReact),
+    date: "August 2024 - present",
   },
 ];
 
