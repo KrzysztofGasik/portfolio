@@ -51,19 +51,27 @@ export const experiencesData = [
     date: "March 2020 - December 2021",
   },
   {
-    title: "Frontend Developer",
-    location: "Wroclaw",
-    description: "I worked as Frontend Developer for Nokia Mobile Networks.",
+    title: 'Frontend Developer',
+    location: 'Wroclaw',
+    description: 'I worked as Frontend Developer for Nokia Mobile Networks.',
     icon: React.createElement(FaReact),
-    date: "January 2022 - June 2024",
+    date: 'January 2022 - June 2024',
   },
   {
     title: "Frontend Developer",
     location: "Wroclaw",
     description:
-      "I worked as Frontend Developer as external contractor in DK&A for Nokia Mobile Networks. My stack includes React, Next.js, TypeScript. Currently, I am open to full-time work, in full-time/hybrid mode in Warsaw or remotely.",
+      "I worked as Frontend Developer as external contractor in DK&A for Nokia Mobile Networks.",
     icon: React.createElement(FaReact),
-    date: "August 2024 - present",
+    date: "August 2024 - May 2025",
+  },
+  {
+    title: "Frontend Developer",
+    location: "Cracow",
+    description:
+      "I worked as Frontend Developer for Grenton. My stack includes React, Next.js, TypeScript. Currently, I am open to full-time work, in full-time/hybrid mode in Warsaw or remotely.",
+    icon: React.createElement(FaReact),
+    date: "June 2025 - present",
   },
 ];
 
@@ -113,6 +121,9 @@ export const skillsData = [
   "JavaScript",
   "Next.js",
   "Redux",
+  "Zustand",
+  "Tanstack Query",
+  "RTK Query",
   "HTML",
   "CSS",
   "Git",

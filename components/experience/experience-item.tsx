@@ -16,6 +16,7 @@ export default function ExperienceItem({
     "#efd81d",
     "#66dbfb",
     "#66dbfb",
+    "#66dbfb",
     "rgba(255,255,255, 0.7)",
   ];
   const { theme } = useTheme();
