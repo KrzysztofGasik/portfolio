@@ -1,5 +1,5 @@
 import React from "react";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { IoMdSend } from "react-icons/io";
 import { useTheme } from "@/context/dark-mode-context";
 import classes from "./submit-button.module.css";

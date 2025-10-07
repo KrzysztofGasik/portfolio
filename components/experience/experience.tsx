@@ -25,7 +25,7 @@ export default function Experience() {
       <SectionHeading title="My experience" />
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
-          <ExperienceItem data={item} index={index} key={item.title} />
+          <ExperienceItem data={item} index={index} key={`${item.title}_${index}`} />
         ))}
       </VerticalTimeline>
     </section>
