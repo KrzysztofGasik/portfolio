@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import SectionHeading from "@/components/section-heading";
-import { motion } from "framer-motion";
-import { useInViewActiveSection } from "@/hooks/hooks";
-import classes from "./about.module.css";
+import SectionHeading from '@/components/section-heading';
+import { motion } from 'framer-motion';
+import { useInViewActiveSection } from '@/hooks/hooks';
+import classes from './about.module.css';
 
 export default function About() {
-  const { ref } = useInViewActiveSection("About");
+  const { ref } = useInViewActiveSection('About');
 
   return (
     <motion.section
@@ -19,21 +19,20 @@ export default function About() {
     >
       <SectionHeading title="About" />
       <p className={classes.paragraph}>
-        Skilled software development professional with{" "}
-        <span className="bold">5 years in web development</span>. What are my
-        current activities? Building next-gen applications using React and TypeScript.
-        Unit and Integration tests done with{" "}
-        <span className="italic">
-          Jest and React Testing Library, E2E in cypress
-        </span>
-        . Collaborating with team members to produce better and cleaner code.
-        Meetings with Software Architects and Designers.
+        I’m a Frontend Engineer{' '}
+        <span className="bold">with 5+ years of experience</span>, delivering
+        React/TypeScript applications for telco and IoT. I specialize in
+        building scalable apps with MUI design systems, real-time features
+        (WebSockets/RPC), and monorepos (Turborepo). My workflow emphasizes
+        strong testing (Jest, React Testing Library, Cypress) and CI/CD
+        (Jenkins, Gerrit), with a focus on performance, reliability, and
+        developer velocity
       </p>
       <p>
-        My current stack is{" "}
-        <span className="underline">React with TypeScript</span> or <span className="underline">Next.js</span>, combined with
-        GIT, Jenkins, Gerrit. Redux/Zustand for state management and RTK Query/Tanstack Query for api
-        calls.
+        My current stack includes{' '}
+        <span className="underline">React with TypeScript</span> or{' '}
+        <span className="underline">Next.js</span>, Redux, Zustand, RTK Query,
+        and modern tooling like Vite and Turborepo.
       </p>
     </motion.section>
   );

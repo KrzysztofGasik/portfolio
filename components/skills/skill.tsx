@@ -1,8 +1,10 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { useTheme } from "@/context/dark-mode-context";
-import classes from "./skill.module.css";
+import { motion } from 'framer-motion';
+import { useTheme } from '@/context/dark-mode-context';
+import classes from './skill.module.css';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import BugReportIcon from '@mui/icons-material/BugReport';
 
 const fadeInAnimationOptions = {
   initial: {
@@ -21,14 +23,16 @@ const fadeInAnimationOptions = {
 export default function Skill({
   name,
   index,
+  type,
 }: {
   name: string;
   index: number;
+  type: string;
 }) {
   const { theme } = useTheme();
   return (
     <motion.li
-      className={`${theme === "dark" ? classes.skillDark : classes.skill}`}
+      className={`${theme === 'dark' ? classes.skillDark : classes.skill}`}
       variants={fadeInAnimationOptions}
       initial="initial"
       whileInView="animate"
