@@ -23,10 +23,10 @@ export default function About() {
         <span className="bold">with 5+ years of experience</span>, delivering
         React/TypeScript applications for telco and IoT. I specialize in
         building scalable apps with MUI design systems, real-time features
-        (WebSockets/RPC), and monorepos (Turborepo). My workflow emphasizes
-        strong testing (Jest, React Testing Library, Cypress) and CI/CD
-        (Jenkins, Gerrit), with a focus on performance, reliability, and
-        developer velocity
+        (WebSockets), and monorepos (Turborepo). My workflow emphasizes strong
+        testing (Jest, React Testing Library, Cypress) and CI/CD (Jenkins,
+        Gerrit), with a focus on performance, reliability, and developer
+        velocity
       </p>
       <p>
         My current stack includes{' '}
