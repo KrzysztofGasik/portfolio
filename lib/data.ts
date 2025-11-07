@@ -74,7 +74,7 @@ export const experiencesData = [
     description:
       'I worked as Frontend Developer for Grenton. Developing and maintaining React 18 + TypeScript apps in a Turborepo monorepo, building a shared MUI design system and real-time features for IoT device management.',
     icon: React.createElement(FaReact),
-    date: 'June 2025 - present',
+    date: 'June 2025 - October 2025',
   },
 ];
 
