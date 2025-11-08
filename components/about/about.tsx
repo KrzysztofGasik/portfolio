@@ -31,8 +31,8 @@ export default function About() {
       <p>
         My current stack includes{' '}
         <span className="underline">React with TypeScript</span> or{' '}
-        <span className="underline">Next.js</span>, Redux, Zustand, RTK Query,
-        and modern tooling like Vite and Turborepo.
+        <span className="underline">Next.js</span>, Redux, Zustand, RTK Query or
+        React Query, and modern tooling like Vite and Turborepo.
       </p>
     </motion.section>
   );

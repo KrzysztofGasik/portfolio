@@ -143,6 +143,7 @@ export const skillsData = [
   { name: 'Nest.js', type: 'library' },
   { name: 'Redux', type: 'library' },
   { name: 'Zustand', type: 'library' },
+  { name: 'React Query', type: 'library' },
   { name: 'RTK Query', type: 'library' },
   { name: 'MUI', type: 'library' },
   { name: 'Node.js', type: 'library' },

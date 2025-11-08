@@ -19,7 +19,6 @@ export default function IntroductionText() {
       <span className="italic">
         specializing in modern, high-performance web solutions.
       </span>
-      .
     </motion.h1>
   );
 }
