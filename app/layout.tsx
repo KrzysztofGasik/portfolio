@@ -6,7 +6,6 @@ import { Toaster } from 'react-hot-toast';
 import Footer from '@/components/footer/footer';
 import DarkModeContextProvider from '@/context/dark-mode-context';
 import DarkMode from '@/components/dark-mode/dark-mode';
-import Background from '@/app/background';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,7 +23,6 @@ export default function RootLayout({
     <html lang="en" data-scroll-behavior="smooth">
       <body className={`${inter.className}`}>
         <DarkModeContextProvider>
-          <Background />
           <Header />
           <main>{children}</main>
           <Footer />

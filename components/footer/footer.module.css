@@ -1,18 +1,26 @@
+.footer,
+.footerDark {
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+
 .footer {
-    margin: 0 0 2rem 0;
-    padding: 1rem 0;
-    text-align: center;
-    color: #6b7280;
+  color: var(--font-color);
+}
+
+.footerDark {
+  color: var(--gray-50);
 }
 
 .copyright {
-    margin: 0 0 1rem 0;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    display: block;
+  margin: 0 0 1rem 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
 }
 
 .information {
-    font-size: 0.75rem;
-    line-height: 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
 }

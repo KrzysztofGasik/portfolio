@@ -3,11 +3,13 @@
 import SectionHeading from '@/components/section-heading';
 import { motion } from 'framer-motion';
 import classes from './about.module.css';
+import { useTheme } from '@/context/dark-mode-context';
 
 export default function About() {
+  const { theme } = useTheme();
   return (
     <motion.section
-      className={classes.about}
+      className={`${theme === 'dark' ? classes.aboutDark : classes.about}`}
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.5 }}
