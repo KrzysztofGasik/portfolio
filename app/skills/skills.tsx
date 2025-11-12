@@ -1,15 +1,11 @@
-'use client';
-
 import SectionHeading from '@/components/section-heading';
 import { skillsData } from '@/lib/data';
-import Skill from '@/components/skills/skill';
-import { useInViewActiveSection } from '@/hooks/hooks';
+import Skill from './skill';
 import classes from './skills.module.css';
 
 export default function Skills() {
-  const { ref } = useInViewActiveSection('Skills');
   return (
-    <section className={classes.skills} id="skills" ref={ref}>
+    <section className={classes.skills}>
       <SectionHeading title="My skills" />
       <ul className={classes.skillsList}>
         {skillsData

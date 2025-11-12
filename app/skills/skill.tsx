@@ -23,7 +23,6 @@ const fadeInAnimationOptions = {
 export default function Skill({
   name,
   index,
-  type,
 }: {
   name: string;
   index: number;

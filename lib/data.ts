@@ -11,58 +11,42 @@ import { RiJavascriptFill } from 'react-icons/ri';
 export const links = [
   {
     name: 'Home',
-    hash: '#home',
+    path: '/',
   },
   {
     name: 'About',
-    hash: '#about',
+    path: '/about',
   },
   {
     name: 'Projects',
-    hash: '#projects',
+    path: '/projects',
   },
   {
     name: 'Skills',
-    hash: '#skills',
+    path: '/skills',
   },
   {
     name: 'Experience',
-    hash: '#experience',
+    path: '/experience',
   },
   {
     name: 'Contact',
-    hash: '#contact',
+    path: '/contact',
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'Coders Lab',
-    location: 'Warsaw',
-    description:
-      'After 9 months of intensive course at Coders Lab I completed it as React Developer',
-    icon: React.createElement(LuGraduationCap),
-    date: 'June 2019',
-  },
-  {
-    title: 'Junior Developer',
-    location: 'Warsaw',
-    description:
-      'I worked as a Junior Developer for 18 months for TV Puls. Implemented responsive, mobile-first pages and standardized frontend components, supporting marketing teams and improving content update workflows.',
-    icon: React.createElement(RiJavascriptFill),
-    date: 'March 2020 - December 2021',
-  },
-  {
     title: 'Frontend Developer',
-    location: 'Wroclaw',
+    location: 'Cracow (remotely)',
     description:
-      'I worked as Frontend Developer for Nokia Mobile Networks. Refactored legacy components to React + TypeScript, expanded automated testing, and streamlined CI/CD pipelines to boost release confidence and developer efficiency.',
+      'I worked as Frontend Developer for Grenton. Developing and maintaining React 18 + TypeScript apps in a Turborepo monorepo, building a shared MUI design system and real-time features for IoT device management.',
     icon: React.createElement(FaReact),
-    date: 'January 2022 - June 2024',
+    date: 'June 2025 - October 2025',
   },
   {
     title: 'Frontend Developer',
-    location: 'Wroclaw',
+    location: 'Wroclaw (remotely)',
     description:
       'I worked as Frontend Developer as external contractor in DK&A for Nokia Mobile Networks. Delivered new React features and optimized performance in a large-scale codebase, collaborating with UX and improving API reliability for responsive, accessible interfaces.',
     icon: React.createElement(FaReact),
@@ -70,11 +54,27 @@ export const experiencesData = [
   },
   {
     title: 'Frontend Developer',
-    location: 'Cracow',
+    location: 'Wroclaw (remotely)',
     description:
-      'I worked as Frontend Developer for Grenton. Developing and maintaining React 18 + TypeScript apps in a Turborepo monorepo, building a shared MUI design system and real-time features for IoT device management.',
+      'I worked as Frontend Developer for Nokia Mobile Networks. Refactored legacy components to React + TypeScript, expanded automated testing, and streamlined CI/CD pipelines to boost release confidence and developer efficiency.',
     icon: React.createElement(FaReact),
-    date: 'June 2025 - October 2025',
+    date: 'January 2022 - June 2024',
+  },
+  {
+    title: 'Junior Developer',
+    location: 'Warsaw (hybrid)',
+    description:
+      'I worked as a Junior Developer for 18 months for TV Puls. Implemented responsive, mobile-first pages and standardized frontend components, supporting marketing teams and improving content update workflows.',
+    icon: React.createElement(RiJavascriptFill),
+    date: 'March 2020 - December 2021',
+  },
+  {
+    title: 'Coders Lab',
+    location: 'Warsaw',
+    description:
+      'After 9 months of intensive course at Coders Lab I completed it as React Developer',
+    icon: React.createElement(LuGraduationCap),
+    date: 'June 2019',
   },
 ];
 
@@ -94,6 +94,7 @@ export const projectsData = [
       'React Query',
     ],
     projectUrl: 'https://chat-room-fe-bj7a.onrender.com',
+    repoUrl: 'https://github.com/KrzysztofGasik/chat-room',
     imageUrl: chatRoomImg,
   },
   {
@@ -101,6 +102,7 @@ export const projectsData = [
     description: 'E-commerce shop with cool metal t-shirts',
     tags: ['Next.js', 'TypeScript', 'React', 'MongoDB', 'Prisma'],
     projectUrl: 'https://t-shop-ecommerce.vercel.app',
+    repoUrl: 'https://github.com/KrzysztofGasik/t-shop',
     imageUrl: tshopImg,
   },
   {
@@ -109,6 +111,7 @@ export const projectsData = [
       'New version of project Oddam Rzeczy. Rebuild from class to hooks, from scss to css modules, from local storage to firebase + redux toolkit.',
     tags: ['React', 'JavaScript', 'Redux', 'Firebase'],
     projectUrl: 'https://share-with-others.web.app',
+    repoUrl: 'https://github.com/KrzysztofGasik/share-with-others',
     imageUrl: shareWithOthersImg,
   },
   {
@@ -123,6 +126,7 @@ export const projectsData = [
       'Framer Motion',
     ],
     projectUrl: 'https://pollen-alert.vercel.app',
+    repoUrl: 'https://github.com/KrzysztofGasik/pollen-alert',
     imageUrl: pollenAlertImg,
   },
   {

@@ -1,31 +1,34 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import { links } from "@/lib/data";
-import Link from "next/link";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useTheme } from "@/context/dark-mode-context";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { links } from '@/lib/data';
+import Link from 'next/link';
 
-import classes from "./header.module.css";
+import { useTheme } from '@/context/dark-mode-context';
+
+import classes from './header.module.css';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+  const routePath = usePathname();
+  const routeName = routePath.replace('/', '');
+  const route = routeName === '' ? 'home' : routeName.toLowerCase();
 
   const { theme } = useTheme();
 
   const linkClasses = (name: string) => {
-    if (activeSection === name) {
-      return `${theme === "dark" ? classes.navigationLinkDark : classes.navigationLink} ${classes.navigationLinkActive} ${classes.transition}`;
+    const isActive = route === name.toLowerCase();
+    if (isActive) {
+      return `${theme === 'dark' ? classes.navigationLinkDark : classes.navigationLink} ${classes.navigationLinkActive} ${classes.transition}`;
     }
-    return `${theme === "dark" ? classes.navigationLinkDark : classes.navigationLink} ${classes.transition}`;
+    return `${theme === 'dark' ? classes.navigationLinkDark : classes.navigationLink} ${classes.transition}`;
   };
 
   return (
     <header className={classes.header}>
       <motion.div
-        className={`${theme === "dark" ? classes.navigationBarDark : classes.navigationBar} transition-150`}
+        className={`${theme === 'dark' ? classes.navigationBarDark : classes.navigationBar} transition-150`}
         initial={{ y: -200, opacity: 0 }}
         animate={{
           y: 0,
@@ -34,25 +37,18 @@ export default function Header() {
       >
         <nav className={classes.nav}>
           <ul className={classes.navigationList}>
-            {links.map(({ hash, name }) => (
+            {links.map(({ path, name }) => (
               <motion.li
-                key={hash}
+                key={path}
                 className={classes.navigationItem}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >
-                <Link
-                  href={hash}
-                  className={linkClasses(name)}
-                  onClick={() => {
-                    setActiveSection(name);
-                    setTimeOfLastClick(Date.now());
-                  }}
-                >
+                <Link href={path} className={linkClasses(name)}>
                   <span
                     className={
-                      activeSection === name
-                        ? `${theme === "dark" ? `${classes.navigationLinkLabelActiveDark} transition-250` : `${classes.navigationLinkLabelActive} ${classes.navigationLinkLabel} transition-250`} `
+                      route === name.toLowerCase()
+                        ? `${theme === 'dark' ? `${classes.navigationLinkLabelActiveDark} transition-250` : `${classes.navigationLinkLabelActive} ${classes.navigationLinkLabel} transition-250`} `
                         : `${classes.navigationLinkLabel} transition-250`
                     }
                   >

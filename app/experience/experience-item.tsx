@@ -1,4 +1,4 @@
-import { ExperienceItemType } from '@/components/experience/experience';
+import { ExperienceItemType } from './experience';
 import { useTheme } from '@/context/dark-mode-context';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import classes from './experience-item.module.css';
@@ -12,11 +12,11 @@ export default function ExperienceItem({
 }) {
   const { title, location, description, date, icon } = data;
   const color = [
-    '#000',
+    '#66dbfb',
+    '#66dbfb',
+    '#66dbfb',
     '#efd81d',
-    '#66dbfb',
-    '#66dbfb',
-    '#66dbfb',
+    '#000',
     'rgba(255,255,255, 0.7)',
   ];
   const { theme } = useTheme();

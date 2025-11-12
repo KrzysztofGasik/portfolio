@@ -1,8 +1,10 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import ProfilePhoto from "@/public/profile_photo.jpg";
-import React from "react";
-import classes from "./introduction-avatar.module.css";
+'use client';
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import ProfilePhoto from '@/public/profile_photo.jpg';
+import React from 'react';
+import classes from './introduction-avatar.module.css';
 
 export default function IntroductionAvatar() {
   return (
@@ -12,7 +14,7 @@ export default function IntroductionAvatar() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            type: "tween",
+            type: 'tween',
             duration: 0.3,
           }}
         >
@@ -32,7 +34,7 @@ export default function IntroductionAvatar() {
           initial={{ opacity: 0, scaleY: 0 }}
           animate={{ opacity: 1, scaleY: 1 }}
           transition={{
-            type: "spring",
+            type: 'spring',
             stiffness: 125,
             delay: 0.25,
             duration: 0.5,
