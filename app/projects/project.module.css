@@ -61,6 +61,10 @@
   justify-content: flex-start;
 }
 
+.projectDetails:last-of-type {
+  margin: 0;
+}
+
 .projectLink,
 .repoLink {
   text-decoration: none;
@@ -172,5 +176,9 @@
 
   .projectImage {
     display: none;
+  }
+
+  .projectDetails:last-of-type {
+    margin: 0 0 1rem 0;
   }
 }
