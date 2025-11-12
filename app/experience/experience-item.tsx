@@ -20,7 +20,6 @@ export default function ExperienceItem({
     'rgba(255,255,255, 0.7)',
   ];
   const { theme } = useTheme();
-  const firstIconColor = theme === 'dark' ? color[color.length - 1] : color[0];
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -48,7 +47,7 @@ export default function ExperienceItem({
             : 'rgba(255,255, 255, 0.8)'
         }`,
         fontSize: '1.5rem',
-        color: index === 0 ? firstIconColor : color[index],
+        color: color[index],
       }}
     >
       <h3 className={classes.experienceItemTitle}>{title}</h3>

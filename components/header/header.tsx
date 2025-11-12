@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
@@ -24,6 +24,10 @@ export default function Header() {
     }
     return `${theme === 'dark' ? classes.navigationLinkDark : classes.navigationLink} ${classes.transition}`;
   };
+
+  useEffect(() => {
+    scrollTo({ top: 0, behavior: 'smooth' });
+  }, [routePath]);
 
   return (
     <header className={classes.header}>

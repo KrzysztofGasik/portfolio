@@ -130,3 +130,9 @@ main {
     transform: rotate(360deg);
   }
 }
+
+@media all and (max-width: 640px) {
+  .section-heading {
+    scroll-margin-top: 6rem;
+  }
+}

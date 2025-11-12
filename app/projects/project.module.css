@@ -100,8 +100,8 @@
   padding: 0;
 }
 
-.projectTag {
-  background-color: rgba(0, 122, 204, 0.5);
+.projectTag,
+.projectTagDark {
   padding: 0.5rem 0.75rem;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -109,6 +109,14 @@
   color: var(--white);
   font-weight: bold;
   border-radius: 9999px;
+}
+
+.projectTag {
+  background-color: rgba(0, 122, 204, 0.5);
+}
+
+.projectTagDark {
+  background-color: var(--gray-800);
 }
 
 .projectImage {

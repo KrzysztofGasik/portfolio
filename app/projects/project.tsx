@@ -18,20 +18,9 @@ export interface IProject {
 
 export default function Project({ data }: { data: IProject }) {
   const { title, description, projectUrl, repoUrl, tags, imageUrl } = data;
-  // const ref = useRef<HTMLDivElement>(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ['0 1', '1.33 1'],
-  // });
-  // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.75, 1]);
-  // const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const { theme } = useTheme();
   return (
-    <div
-      // ref={ref}
-      // style={{ scale: scaleProgress, opacity: opacityProgress }}
-      className={classes.projectWrapper}
-    >
+    <div className={classes.projectWrapper}>
       <section
         className={`${theme === 'dark' ? classes.projectDark : classes.project} transition-150`}
       >
@@ -66,7 +55,10 @@ export default function Project({ data }: { data: IProject }) {
           </div>
           <ul className={classes.projectTags}>
             {tags.map((tag) => (
-              <li key={tag} className={classes.projectTag}>
+              <li
+                key={tag}
+                className={`${theme === 'dark' ? classes.projectTagDark : classes.projectTag}`}
+              >
                 {tag}
               </li>
             ))}
