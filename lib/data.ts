@@ -93,7 +93,7 @@ export const projectsData = [
       'MUI',
       'React Query',
     ],
-    projectUrl: 'https://chat-room-fe-bj7a.onrender.com',
+    projectUrl: 'https://dcjsltdj06ol7.cloudfront.net',
     repoUrl: 'https://github.com/KrzysztofGasik/chat-room',
     imageUrl: chatRoomImg,
   },
