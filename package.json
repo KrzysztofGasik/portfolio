@@ -22,7 +22,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "framer-motion": "^12.23.22",
-    "next": "^16.0.7",
+    "next": "^16.0.10",
     "postcss": "8.4.31",
     "react": "19.2.0",
     "react-dom": "19.2.0",
